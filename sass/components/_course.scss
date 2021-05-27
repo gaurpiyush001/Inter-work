@@ -1,0 +1,89 @@
+.courses{
+
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 3rem;
+        
+        @include respond(tab-land){
+            font-size: 3.4rem;
+        }
+
+
+    }
+
+    &__descrip{
+        text-align: center;
+        font-size: 1.4rem;
+
+        @include respond(tab-land){
+            font-size: 1.8rem;
+        }
+
+        margin-bottom: 3rem;
+    }
+
+    &__option{
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-around;
+
+        @include respond(tab-land){
+            flex-direction: column;
+            align-items: stretch;
+
+        }
+
+    }
+
+    &__optioni{
+        width: 35rem;
+        
+        @include respond(tab-land){
+            flex: 1;
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-img{
+            background-size: cover;
+            width: 35rem;
+            padding-bottom: 2rem;
+            @include respond(tab-land){
+                width: 100%;
+                margin-top: 3rem;
+            }
+        }
+
+        &-head{
+            font-size: 2rem;
+            font-weight: 700;
+            padding-bottom: 2rem;
+            @include respond(tab-land){
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+
+        &-explain{
+            font-size: 1.6rem;
+            @include respond(tab-land){
+                text-align: center;
+                font-size: 2rem;
+                margin: 2.5rem 0;
+            }
+        }
+
+    }
+
+}
+
+.high{
+    height: 21.5rem;
+    @include respond(tab-land){
+        height: 44rem;
+    }
+}

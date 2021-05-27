@@ -1,0 +1,44 @@
+.cards{
+    display: flex;
+    padding-bottom: 10rem;
+
+    @include respond(small-er){
+        padding-bottom: 7rem;
+    }
+
+    &__detail{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        color: white;
+        background-color: var(--color-primary-1);
+        align-items: center;
+        padding: 3rem 2rem;
+
+        &-icon{
+            box-sizing: content-box;
+            height: 3rem;
+            width: 3rem;
+            fill: #eee;
+            padding-bottom: 1.8rem;
+        }
+
+        &-heading{
+            font-weight: 700;
+            font-size: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        &-para{
+            // padding: 1.8rem 2.2rem;
+            text-align: center;
+            font-size: 1.3rem;          
+        }
+
+    }
+}
+
+.blue{
+    background-color:var(--color-dark-blue);
+    padding-bottom: 5rem;
+}

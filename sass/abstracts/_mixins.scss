@@ -1,0 +1,37 @@
+//  first beakpoint -->> 1070px (Courses section)
+
+//In this mixin we are passing an argument
+@mixin respond($breakpoint){
+
+    //here we are using a directive of sass(@if), used to apply the styles only when particular condition is true
+
+    //We will use em units in media queries bcz if user changes font-size in browser than em will handle it best
+
+    @if $breakpoint==laptop {
+        // 1070 / 16 == 66.85
+        @media only screen and (max-width: 66.85em){ @content };                    
+    }
+
+    @if $breakpoint==tab-land {
+        // 870 / 16 == 54.37
+        @media only screen and (max-width: 54.37em){ @content };
+    }
+
+    @if $breakpoint==tab-port{
+        // 720 /16 ---> 45
+        @media only screen and (max-width: 45em){ @content };
+    }
+
+    @if $breakpoint==small-er {
+        // 430 /16 ----> 26.87
+        @media only screen and (max-width: 26.87em){ @content };
+    }
+
+    @if $breakpoint==small-st{
+        //  390 / 16 ----->  24.37
+        @media only screen and (max-width: 24.27em){ @content };
+
+    }
+
+
+}

@@ -1,0 +1,51 @@
+
+
+:root{
+    --color-primary: #eba83a;
+    --color-primary-1: #e0bb20;
+
+
+    --color-dark-blue: #0a1931;
+
+    --color-footer: #282624;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+html{
+
+    ///  10 px/ 16px 
+
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include respond(laptop){
+        font-size: 50%;    //9 / 16 == 56.25 , 8.5 / 16 == 53.2  , 8/16 = 50%
+    }
+
+    @include respond(tab-port){
+        font-size: 30%; // 6 / 16 == 37.5
+    }
+
+    @include respond(small-st){
+        font-size: 25%;
+    }
+
+
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}

@@ -1,0 +1,133 @@
+.btn{
+
+    &,
+    &:link,
+    &:visited{
+    height: 4.5rem;
+    width: 11rem;
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: #eee;
+    background-color: var(--color-primary);
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .4s;
+
+
+    @include respond(tab-port){
+        margin-right: .5rem;
+      }
+    @include respond(small-er){
+        flex: 1;
+        margin-right: 0;
+        display: flex;
+        align-self: stretch;
+        height: auto;
+        padding-top: 3rem;
+        width: 13rem;
+        font-size: 1.7rem;
+    }
+
+    @include respond(small-st){
+        // align-self: none;
+        // height: 3rem;
+        text-align: center;
+        // width: 10rem;
+        flex: 0;
+    }
+
+
+
+
+    }
+
+
+    &:hover{
+        transform: translateY(-0.3rem);
+        /* **Note** imp-: In CSS THE Y-AXIS move from top to bottom */
+        box-shadow: 0 1rem 2rem rgba(black, 0.2);
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 1rem 1.1rem rgba(black, 0.2);
+    
+    }
+
+}
+
+.btn__round{
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    height: 5.9rem;
+    letter-spacing: 1px;
+    width: 16rem;
+    padding: 2rem 2.8rem;
+    border-radius: 5.5rem;
+    border: 2px solid #eee;
+    margin-bottom: 5rem;
+
+    @include respond(laptop){
+        // font-size: 1.4rem;
+        width: 19rem;
+    }
+    @include respond(tab-land){
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    @include respond(small-er){
+        margin: 0 auto !important;
+    }
+
+    @include respond(small-st){
+        padding: 1rem 2.8rem;
+        border-radius: 5rem;
+        border: .5px solid #eee;
+    }
+
+}
+
+.dots {
+    position: absolute;
+    bottom: 45%;
+
+
+    @include respond(small-st){
+        bottom: 54%;
+    }
+
+
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dots__dot {
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: orangered;
+  
+    /* Only necessary when overlying images */
+    /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+  }
+  
+  .dots__dot:last-child {
+    margin: 0;
+  }
+  
+  .dots__dot--active {
+    /* background-color: #fff; */
+    background-color: white;
+    opacity: 1;
+  }

@@ -1,0 +1,214 @@
+.foot{
+    color: #eee;
+    display: flex;
+    height: 40rem;
+
+
+
+    margin-top: 8rem;
+    background-color: var(--color-footer);
+    padding: 4rem;
+    justify-content: space-between;
+    
+    // flex-direction: column;
+
+    @include respond(small-er){
+        padding: 2rem;
+    }
+
+    @include respond(small-st){
+        flex-direction: column;
+        align-items: center;
+        height: 85rem;
+    }
+
+
+    &__icon{
+        box-sizing: content-box;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        fill: #eee;
+        margin-right: .6rem;
+
+        @include respond(small-er){
+            height: 1.8rem;
+            width: 1.8rem;
+            margin-right: 0;
+        }
+
+        @include respond(small-st){
+            height: 1.8rem;
+            width: 1.8rem;
+            margin-right: 1.5rem;
+        }
+
+
+    }
+
+    &__head{
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+        @include respond(small-er){
+            font-size: 1.7rem;
+        }
+
+    }
+
+    &__q{
+        display: flex;
+        // height: 25rem;
+        // width: 18rem;
+        font-size: 1.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+
+        @include respond(small-er){
+            font-size: 1.2rem;
+        }
+
+        @include respond(small-st){
+            margin-bottom: 2rem;
+            // align-items: center;
+        }
+
+        &-add{
+            display: flex;
+            
+        @include respond(small-st){
+            margin-bottom: 1rem;
+        }
+            // flex: 1;
+            &-txt{
+                width: 20rem;
+                @include respond(small-er){
+                    width: 15rem;
+                }
+            }
+        }
+
+
+
+        &-phone{
+            display: flex;
+                        
+        @include respond(small-st){
+            margin-bottom: 1rem;
+        }
+        }
+
+        &-mail{
+            display: flex;
+                        
+        @include respond(small-st){
+            margin-bottom: 1rem;
+        }
+        }
+
+    }
+
+    &__connect{
+        display: flex;
+        flex:1;
+        flex-direction: column;
+
+        @include respond(small-er){
+            margin-right: 1.3rem;
+        }
+
+                    
+        @include respond(small-st){
+            margin-bottom: 2.5rem;
+            flex: 0;
+        }
+        // justify-content: space-between;
+        // height: 25rem;
+        // width: 20rem;
+        &-icons{
+            margin-top: 5rem;
+            display: flex;
+            // justify-content: space-around;
+            cursor: pointer;
+            margin-left: -3rem;
+
+                        
+        @include respond(small-st){
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+            &-1,&-2,&-3{
+                height: 3rem;
+                width: 3rem;
+                @include respond(small-er){
+                    height: 2.1rem;
+                    width: 2.1rem;
+                }
+
+            }
+        }
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        flex: 1;
+
+        @include respond(small-st){
+            // display: flex;
+            margin-bottom: 2rem;
+        }
+
+        &-list{
+            margin-top: 5rem;
+
+                        
+        @include respond(small-st){
+            // display: flex;
+            margin-top: .2rem;
+        }
+        }
+        &-list--i{
+            list-style: none;
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+
+        }
+
+    }
+    &__map{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        
+        @include respond(small-st){
+            align-items: center;
+        }
+       
+        &-loc{
+            margin-top: 5rem;
+            width: 25rem;
+            height: 25rem;
+
+            @include respond(small-st){
+                margin-top: 1rem;
+                width: 18rem;
+                height: 18rem;
+            }
+        }
+    }
+}
+
+.footer__copyright{
+    // margin: 4rem auto;
+
+    text-align: center;
+    // margin: 0 auto;
+    padding: 5rem 0;
+    font-size: 1.5rem;
+    color: #eee;
+    background-color: var(--color-footer);
+}
